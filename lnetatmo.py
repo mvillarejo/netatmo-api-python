@@ -301,8 +301,10 @@ class WelcomeData:
                 self.cameras[nameHome][ c['id'] ] = c
         for camera in self.events:
             self.lastEvent[camera]=self.events[camera][sorted(self.events[camera])[-1]]
-        self.default_home = list(self.homes.values())[0]['name']
-        self.default_camera = list(self.cameras[self.default_home].values())[0]
+        # self.default_home = list(self.homes.values())[0]['name']
+        self.default_home = ""
+        # self.default_camera = list(self.cameras[self.default_home].values())[0]
+        self.default_camera = ""
 
     def homeById(self, hid):
         return None if hid not in self.homes else self.homes[hid]
